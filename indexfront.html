@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservice Deployment</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Deploy Your Microservice</h1>
+        <form id="deploy-form" @submit.prevent="deployMicroservice">
+            <div>
+                <label for="service-name">Service Name:</label>
+                <input type="text" id="service-name" v-model="serviceName" required>
+            </div>
+            <div>
+                <label for="aws-region">AWS Region:</label>
+                <select id="aws-region" v-model="awsRegion" required>
+                    <option value="">Select a region</option>
+                    <option value="us-east-1">US East (N. Virginia)</option>
+                    <option value="us-west-2">US West (Oregon)</option>
+                    <!-- Add more regions as needed -->
+                </select>
+            </div>
+            <!-- Add more configuration inputs as needed -->
+            <button type="submit">Deploy</button>
+        </form>
+        <div v-if="deploymentStatus">
+            <h2>Deployment Status</h2>
+            <p>{{ deploymentStatus }}</p>
+        </div>
+        <div v-if="apiKey">
+            <h2>API Key</h2>
+            <p>{{ apiKey }}</p>
+            <a href="test.html">Test your microservice</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</body>
+</html>
