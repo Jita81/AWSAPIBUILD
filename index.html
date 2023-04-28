@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservice Deployment</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="static/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Microservice Deployment</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Enter Microservice Configuration Details</h2>
+            <form id="deployment-form">
+                <label for="service-name">Service Name:</label>
+                <input type="text" id="service-name" name="service-name" required>
+
+                <label for="aws-region">AWS Region:</label>
+                <select id="aws-region" name="aws-region" required>
+                    <option value="">Select a region</option>
+                    <option value="us-east-1">US East (N. Virginia)</option>
+                    <option value="us-west-2">US West (Oregon)</option>
+                    <!-- Add more AWS regions as needed -->
+                </select>
+
+                <!-- Add more configuration fields as needed -->
+
+                <button type="submit">Deploy Microservice</button>
+            </form>
+        </section>
+        <section id="deployment-result" hidden>
+            <h2>Deployment Result</h2>
+            <p id="deployment-message"></p>
+            <a href="test.html">Test Deployed Microservice</a>
+        </section>
+    </main>
+</body>
+</html>
