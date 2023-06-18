@@ -1,3 +1,6 @@
+This doesn't work currently, and it's on the back burner for now.
+
+
 # AWSAPIBUILD
 
 A lightweight Python product that allows users to deploy multiple instances of the same microservice architecture with different names. The product will include a simple way to test each deployed microservice using the API service from the app itself. The solution will be divided into two parts: a backend and a frontend.
